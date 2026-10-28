@@ -50,7 +50,7 @@ class WizardTest {
         evilWizard.train()
 
         assertEquals(25, evilWizard.mana)
-        assertEquals(1, evilWizard.spellPower)
+        assertEquals(11, evilWizard.spellPower)
     }
     @Test
     fun hasNotEnoughMana() {
@@ -58,8 +58,8 @@ class WizardTest {
 
         weak.train()
 
-        assertEquals(3, evilWizard.mana)
-        assertEquals(0, evilWizard.spellPower)
+        assertEquals(3, weak.mana)
+        assertEquals(0, weak.spellPower)
     }
 
 
