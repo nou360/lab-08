@@ -45,4 +45,22 @@ class WizardTest {
 
         assertEquals(70, evilWizard.mana)
     }
+    @Test
+    fun hasEnoughMana(){
+        evilWizard.train()
+
+        assertEquals(25, evilWizard.mana)
+        assertEquals(1, evilWizard.spellPower)
+    }
+    @Test
+    fun hasNotEnoughMana() {
+        val weak = Wizard("Weak", 3, 0)
+
+        weak.train()
+
+        assertEquals(3, evilWizard.mana)
+        assertEquals(0, evilWizard.spellPower)
+    }
+
+
 }
